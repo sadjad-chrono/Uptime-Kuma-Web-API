@@ -5,6 +5,7 @@ from fastapi.responses import RedirectResponse
 from routers import (
     statuspage,
     monitor,
+    notification,
     auth,
     tags,
     cert,
@@ -26,6 +27,7 @@ app.include_router(user.router, prefix="/users", tags=["Users"])
 app.include_router(settings.router, prefix="/settings", tags=["Settings"])
 app.include_router(database.router, prefix="/database", tags=["DataBase"])
 app.include_router(monitor.router, prefix="/monitors", tags=["Monitor"])
+app.include_router(notification.router, prefix="/notifications", tags=["Notification"])
 app.include_router(statuspage.router, prefix="/statuspages", tags=["Status Page"])
 app.include_router(maintenance.router, prefix="/maintenance", tags=["Maintenance"])
 app.include_router(tags.router, prefix="/tags", tags=["Tags"])
