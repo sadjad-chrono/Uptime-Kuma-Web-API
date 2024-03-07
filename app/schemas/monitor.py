@@ -20,6 +20,7 @@ class Monitor(BaseModel):
     expiryNotification: bool = False
     ignoreTls: bool = False
     maxredirects: int = 10
+    timeout: Optional[int] = 48
     accepted_statuscodes: Optional[List] = None
     proxyId: Optional[int] = None
     method: str = "GET"

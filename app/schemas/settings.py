@@ -38,6 +38,7 @@ class MonitorListItem(BaseModel):
     ignoreTls: bool
     upsideDown: bool
     maxredirects: Optional[int]
+    timeout: Optional[int]
     accepted_statuscodes: Optional[List[str]]
     dns_resolve_type: Optional[str]
     dns_resolve_server: Optional[Optional[str]]
